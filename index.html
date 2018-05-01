@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form name="number">
+    <input type="text" name="numeration" placeholder="Введите число"></input>
+    <input type="button" name="print" value="Считать"/>
+    <div id="numBlock"></div>
+    <script>
+    	var keyBox = document.number.numeration;
+    	function onchange(e){
+    		var numBlock = document.getElementById("numBlock");
+    		var val = e.target.value;
+    		numBlock.textContent = val;
+    		
+    	}
+    	keyBox.addEventListener("change",onchange);
+    </script>
+</form>
+</body>
+</html>
