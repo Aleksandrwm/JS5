@@ -1,24 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+  <meta charset="utf-8">
+
+  <script>
+    function onclickMybutton() {
+		var txt = document.getElementById("txtCount");
+		var myResult = document.getElementById("divResult");
+		var val = txtCount.value;
+		var txt = parseInt(val);
+	
+		for(var i=0; i<txt; i++) {
+			myResult.textContent += ',' + i;
+			
+      }
+    }
+  </script>
 </head>
 <body>
-	<form name="number">
-    <input type="text" name="numeration" placeholder="Введите число"></input>
-    <input type="button" name="print" value="Считать"/>
-    <div id="numBlock"></div>
-    <script>
-    	var keyBox = document.number.numeration;
-    	function onchange(e){
-    		var numBlock = document.getElementById("numBlock");
-    		var val = e.target.value;
-    		numBlock.textContent = val;
-    		
-    	}
-    	keyBox.addEventListener("change",onchange);
-    </script>
-</form>
+	<input id ="txtCount" type="text" name="number" placeholder="Введите число"></input>
+	<input type="button" onclick="onclickMybutton()" value="Считать"/>
+	<div id="divResult"></div>
 </body>
 </html>
+
